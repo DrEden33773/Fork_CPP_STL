@@ -42,6 +42,7 @@ void TestForkList() {
   cout << endl;
 }
 
+// test in main() function
 int main() {
   // to test ForkVector
   TestForkVector();
