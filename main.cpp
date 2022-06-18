@@ -42,15 +42,6 @@ void TestForkList() {
   cout << endl;
 }
 
-[[noreturn]] void test() {
-  // test C-style array
-  [[maybe_unused]] int a[3] = {1, 2, 3};
-  // test unlimited loop
-  while (true) {
-    cout << "test" << endl;
-  }
-}
-
 int main() {
   // to test ForkVector
   TestForkVector();
