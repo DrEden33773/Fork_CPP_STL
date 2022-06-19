@@ -83,14 +83,13 @@ template <typename T>
 void ForkList<T>::push_back(const T &value) {
   Node *curr = new Node;
   curr->data = value;
-  curr->next = nullptr;
-  curr->prev = tail;
-  if (tail != nullptr) {
+  if (!head) {
+    head = curr;
+    tail = curr;
+  } else {
     tail->next = curr;
-  }
-  tail = curr;
-  if (head == nullptr) {
-    head = tail;
+    curr->prev = tail;
+    tail       = curr;
   }
   ++size;
 }

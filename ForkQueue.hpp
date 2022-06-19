@@ -12,7 +12,7 @@ class ForkQueue {
 private:
   class Node {
   public:
-    T data      = NULL;
+    T data;
     Node *front = nullptr;
     Node *back  = nullptr;
     explicit Node(const T &data) { this->data = data; }
@@ -29,7 +29,7 @@ public:
   ForkQueue(ForkQueue &&other) noexcept;
 
   // functions
-  void join(const T &data);  // join a node into the queue
+  void push(const T &data);  // push a node into the queue
   void quit_head();          // quit head node from the queue
   void quit_tail();          // quit tail node from the queue
   T &fetch_head();           // fetch head node from the queue
@@ -122,36 +122,42 @@ ForkQueue<T>::ForkQueue(ForkQueue &&other) noexcept {
 
 // functions
 template <typename T>
-void ForkQueue<T>::join(const T &data) {
+void ForkQueue<T>::push(const T &data) {
   Node *curr = new Node(data);
-  if (head == nullptr) {
+  if (!head) {
     head = curr;
+    tail = curr;
   } else {
-    tail->front = curr;
+    tail->back  = curr;
+    curr->front = tail;
+    tail        = curr;
   }
-  tail = curr;
   ++size;
 }
 template <typename T>
 void ForkQueue<T>::quit_head() {
-  if (size == 0) {
+  if (head == nullptr) {
     return;
   }
-  Node *curr  = head;
-  head        = head->back;
-  head->front = nullptr;
-  delete curr;
+  Node *temp = head;
+  head       = head->back;
+  if (head) {
+    head->front = nullptr;
+  }
+  delete temp;
   --size;
 }
 template <typename T>
 void ForkQueue<T>::quit_tail() {
-  if (size == 0) {
+  if (tail == nullptr) {
     return;
   }
-  Node *curr = tail;
+  Node *temp = tail;
   tail       = tail->front;
-  tail->back = nullptr;
-  delete curr;
+  if (tail == nullptr) {
+    tail->back = nullptr;
+  }
+  delete temp;
   --size;
 }
 template <typename T>
@@ -313,7 +319,7 @@ void ForkQueue<T>::echo() const {
   Node *curr = head;
   while (curr != nullptr) {
     std::cout << curr->data << ", ";
-    curr = curr->front;
+    curr = curr->back;
   }
   std::cout << "\b\b  \b\b" << std::endl;
   std::cout << std::endl;

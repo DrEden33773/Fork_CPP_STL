@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "ForkList.hpp"
+#include "ForkQueue.hpp"
 #include "ForkVector.hpp"
 
 using namespace std;
@@ -42,12 +43,31 @@ void TestForkList() {
   cout << endl;
 }
 
+void TestForkQueue() {
+  cout << "Test ForkQueue >> " << endl;
+  cout << "================================" << endl;
+  ForkQueue<int> forkQueue;
+  forkQueue.push(1);
+  forkQueue.push(2);
+  forkQueue.push(3);
+  forkQueue.echo();
+  forkQueue.quit_head();
+  forkQueue.quit_tail();
+  forkQueue.push(4);
+  forkQueue.push(5);
+  forkQueue.echo();
+  cout << "================================" << endl;
+  cout << endl;
+}
+
 // test in main() function
 int main() {
   // test ForkVector
   TestForkVector();
   // test ForkList
   TestForkList();
+  // test ForkQueue
+  TestForkQueue();
   cout << "End of program, press enter to exit ... " << endl;
   getchar_unlocked();
 }
