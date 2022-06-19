@@ -44,9 +44,9 @@ void TestForkList() {
 
 // test in main() function
 int main() {
-  // test ForkVector
+  // try to test ForkVector
   TestForkVector();
-  // test ForkList
+  // try to test ForkList
   TestForkList();
   cout << "End of program, press enter to exit ... " << endl;
   getchar_unlocked();
