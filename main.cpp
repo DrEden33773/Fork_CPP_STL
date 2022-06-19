@@ -1,4 +1,4 @@
-﻿#include <cstdio>
+#include <cstdio>
 #include <iostream>
 
 #include "ForkList.hpp"
@@ -44,9 +44,9 @@ void TestForkList() {
 
 // test in main() function
 int main() {
-  // to test ForkVector
+  // test ForkVector
   TestForkVector();
-  // to test ForkList
+  // test ForkList
   TestForkList();
   cout << "End of program, press enter to exit ... " << endl;
   getchar_unlocked();
