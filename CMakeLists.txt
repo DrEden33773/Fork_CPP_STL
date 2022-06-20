@@ -9,4 +9,4 @@ add_executable(ForkSTL
         ForkList.hpp
         ForkQueue.hpp
         ForkVector.hpp
-        main.cpp)
+        main.cpp ForkStack.hpp)

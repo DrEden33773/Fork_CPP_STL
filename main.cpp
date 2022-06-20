@@ -3,6 +3,7 @@
 
 #include "ForkList.hpp"
 #include "ForkQueue.hpp"
+#include "ForkStack.hpp"
 #include "ForkVector.hpp"
 
 using namespace std;
@@ -60,6 +61,24 @@ void TestForkQueue() {
   cout << endl;
 }
 
+void TestForkStack() {
+  cout << "Test ForkStack >> " << endl;
+  cout << "================================" << endl;
+  ForkStack<int> forkStack;
+  forkStack.push(1);
+  forkStack.push(2);
+  forkStack.push(3);
+  forkStack.echo();
+  forkStack.pop_without_return();
+  forkStack.pop_without_return();
+  forkStack.pop_without_return();
+  forkStack.push(4);
+  forkStack.push(5);
+  forkStack.echo();
+  cout << "================================" << endl;
+  cout << endl;
+}
+
 // test in main() function
 int main() {
   // test ForkVector
@@ -68,6 +87,8 @@ int main() {
   TestForkList();
   // test ForkQueue
   TestForkQueue();
+  // test ForkStack
+  TestForkStack();
   cout << "End of program, press enter to exit ... " << endl;
   getchar_unlocked();
 }
