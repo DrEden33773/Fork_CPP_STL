@@ -71,7 +71,6 @@ void TestForkStack() {
   forkStack.echo();
   forkStack.pop_without_return();
   forkStack.pop_without_return();
-  forkStack.pop_without_return();
   forkStack.push(4);
   forkStack.push(5);
   forkStack.echo();
