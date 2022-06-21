@@ -91,3 +91,5 @@ int main() {
   cout << "End of program, press enter to exit ... " << endl;
   getchar_unlocked();
 }
+
+// this line was designed to test the function of git
