@@ -1,12 +1,12 @@
 ﻿---
 Language:        Cpp
-# BasedOnStyle:  Google => Now, has been deeply user-defined
-AccessModifierOffset: -2 # original => -1
+# BasedOnStyle:  Google
+AccessModifierOffset: -2
 AlignAfterOpenBracket: Align
 AlignArrayOfStructures: None
-AlignConsecutiveMacros: None
-AlignConsecutiveAssignments: Consecutive # original => None
-AlignConsecutiveBitFields: None
+AlignConsecutiveMacros: Consecutive
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
 AlignConsecutiveDeclarations: None
 AlignEscapedNewlines: Left
 AlignOperands:   Align
