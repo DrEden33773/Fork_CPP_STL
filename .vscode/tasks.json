@@ -1,0 +1,67 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "lldb_debug_single",
+			"command": "clang++",
+			"args": [
+				"-std=gnu++20",
+				"-fdiagnostics-color=always",
+				"-Wall",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/GeneratedProgram.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler => /usr/sbin/clang++"
+		},
+		{
+			"type": "shell",
+			"label": "lldb_debug_multi",
+			"command": "clang++",
+			"args": [
+				"-std=gnu++20",
+				"-fdiagnostics-color=always",
+				"-Wall",
+				"-g",
+				"${fileDirname}/*.cpp",
+				"-o",
+				"${fileDirname}/GeneratedProgram.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler => /usr/sbin/clang++"
+		},
+		{
+			"type": "shell",
+			"label": "cmake_lldb_debug",
+			"command": "mkdir build; cd build; cmake ..; make",
+			"args": [],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			"group": "build",
+			"detail": "compiler => /usr/sbin/clang++"
+		},
+	]
+}

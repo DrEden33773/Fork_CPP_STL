@@ -1,0 +1,41 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "single",
+            "program": "${fileDirname}/GeneratedProgram.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "preLaunchTask": "lldb_debug_single",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "multi",
+            "program": "${fileDirname}/GeneratedProgram.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "preLaunchTask": "lldb_debug_multi",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "cmake",
+            "program": "${workspaceFolder}/build/ForkSTL",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "preLaunchTask": "cmake_lldb_debug",
+        },
+    ]
+}
