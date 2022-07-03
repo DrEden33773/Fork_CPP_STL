@@ -1,7 +1,7 @@
 [
-{
-  "directory": "/home/eden/CppProjects/Fork_CPP_STL/build",
-  "command": "/usr/sbin/clang++  -I/home/eden/CppProjects/Fork_CPP_STL/. -g -std=gnu++20 -o CMakeFiles/ForkSTL.dir/main.cpp.o -c /home/eden/CppProjects/Fork_CPP_STL/main.cpp",
-  "file": "/home/eden/CppProjects/Fork_CPP_STL/main.cpp"
-}
+  {
+    "directory": "/home/eden/CppProjects/Fork_CPP_STL/build",
+    "command": "/usr/sbin/clang++  -I/home/eden/CppProjects/Fork_CPP_STL/. -g -std=gnu++20 -o CMakeFiles/ForkSTL.dir/main.cpp.o -c /home/eden/CppProjects/Fork_CPP_STL/main.cpp",
+    "file": "/home/eden/CppProjects/Fork_CPP_STL/main.cpp"
+  }
 ]
