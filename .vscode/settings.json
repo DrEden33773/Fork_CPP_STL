@@ -1,0 +1,9 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "files.associations": {
+        ".clang-format": "yaml",
+        ".clangd": "yaml",
+        "compile_commands": "jsonc",
+        "iostream": "cpp"
+    }
+}

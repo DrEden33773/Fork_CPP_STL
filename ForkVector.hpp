@@ -1,4 +1,4 @@
-﻿#pragma once
+﻿// #pragma once
 
 #include <iostream>
 #include <iterator>
@@ -22,9 +22,6 @@ public:
   ForkVector(ForkVector &&other) noexcept;  // move constructor
 
   static void set_initial_capacity(const int &num);  // set init_capacity_num
-
-  iterator<ForkVector, T> begin();  // return iterator to the first element
-  iterator<ForkVector, T> end();    // return iterator to the last element
 
   void preAlloc(const int &n);                        // pre_allocate_capacity
   void push_back(const T &value);                     // push_back
@@ -87,17 +84,6 @@ ForkVector<T>::ForkVector(const ForkVector &other) {
     capacity = other.capacity;
     data     = new T[capacity];
   }
-}
-
-// iterator begin
-template <typename T>
-iterator<ForkVector<T>, T> ForkVector<T>::begin() {
-  return iterator<ForkVector, T>(*this, 0);
-}
-// iterator end
-template <typename T>
-iterator<ForkVector<T>, T> ForkVector<T>::end() {
-  return iterator<ForkVector, T>(*this, size);
 }
 
 // pre_allocate_capacity

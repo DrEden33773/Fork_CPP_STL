@@ -5,7 +5,8 @@
  *  [surface] <-(upper)- [node] -(lower)-> [bottom]
  */
 
-#pragma once
+// #pragma once
+
 #include <iostream>
 #include <iterator>
 using namespace std;
@@ -76,7 +77,7 @@ public:
   bool operator!=(const ForkStack &other) const;
   T &operator[](const int &index);
   const T &operator[](const int &index) const;
-  iterator &operator=(const iterator &other);
+  iterator &operator      =(const iterator &other);
   const iterator &operator=(const iterator &other) const;
   bool operator==(const iterator &other) const;
   bool operator!=(const iterator &other) const;

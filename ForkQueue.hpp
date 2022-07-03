@@ -1,7 +1,7 @@
 ﻿// those who joined the queue earlier will be fetched first
 // those who joined the queue later will be fetched later
 
-#pragma once
+// #pragma once
 
 #include <iostream>
 #include <iterator>
@@ -70,7 +70,7 @@ public:
   const iterator &end() const { return iterator(nullptr); }
   iterator &operator[](const int &index);
   const iterator &operator[](const int &index) const;
-  iterator &operator=(const iterator &other);
+  iterator &operator      =(const iterator &other);
   const iterator &operator=(const iterator &other) const;
   bool operator==(const iterator &other) const;
   bool operator!=(const iterator &other) const;

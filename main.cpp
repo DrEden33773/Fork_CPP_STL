@@ -1,5 +1,4 @@
-﻿#include <cstdio>
-#include <iostream>
+﻿#include <iostream>
 
 #include "ForkList.hpp"
 #include "ForkQueue.hpp"
@@ -91,5 +90,3 @@ int main() {
   cout << "End of program, press enter to exit ... " << endl;
   getchar_unlocked();
 }
-
-// this line was designed to test the function of git
