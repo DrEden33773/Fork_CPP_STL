@@ -12,7 +12,7 @@
 				"-g",
 				"${file}",
 				"-o",
-				"${fileDirname}/GeneratedProgram.exe"
+				"${fileDirname}/GeneratedProgram.bin"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -34,7 +34,7 @@
 				"-g",
 				"${fileDirname}/*.cpp",
 				"-o",
-				"${fileDirname}/GeneratedProgram.exe"
+				"${fileDirname}/GeneratedProgram.bin"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
