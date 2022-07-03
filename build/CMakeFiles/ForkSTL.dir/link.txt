@@ -1,1 +1,0 @@
-/usr/sbin/clang++ -g CMakeFiles/ForkSTL.dir/main.cpp.o -o ForkSTL 

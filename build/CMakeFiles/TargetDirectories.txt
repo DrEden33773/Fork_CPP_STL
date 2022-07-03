@@ -1,3 +1,0 @@
-/home/eden/CppProjects/Fork_CPP_STL/build/CMakeFiles/ForkSTL.dir
-/home/eden/CppProjects/Fork_CPP_STL/build/CMakeFiles/edit_cache.dir
-/home/eden/CppProjects/Fork_CPP_STL/build/CMakeFiles/rebuild_cache.dir
