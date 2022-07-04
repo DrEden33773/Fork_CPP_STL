@@ -58,7 +58,7 @@
 			],
 			"presentation": {
 				// Reveal the output only if unrecognized errors occur.
-				"reveal": "silent"
+				// "reveal": "silent"
 			},
 			"group": "build",
 			"detail": "compiler => /usr/sbin/clang++"
