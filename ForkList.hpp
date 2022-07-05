@@ -14,10 +14,10 @@ private:
     Node *next = nullptr;
     Node *prev = nullptr;
   };
-  Node *head  = nullptr;  // head of the list
-  Node *tail  = nullptr;  // tail of the list
-  int size    = 0;        // size of the list
-  int current = 0;        // current position in the list  => [[may not use]]
+  [[maybe_unused]] Node *head  = nullptr;  // head of the list
+  [[maybe_unused]] Node *tail  = nullptr;  // tail of the list
+  int size                     = 0;        // size of the list
+  [[maybe_unused]] int current = 0;        // current position in the list
 
 public:
   ForkList() = default;                 // constructor
