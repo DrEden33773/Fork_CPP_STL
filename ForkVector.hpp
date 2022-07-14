@@ -103,7 +103,9 @@ void ForkVector<T>::preAlloc(const int &n) {
 template <typename T>
 void ForkVector<T>::push_back(const T &value) {
   if (size == capacity) {
-    preAlloc(capacity + 1);
+    preAlloc(capacity * 2);
+    // preAlloc(capacity * 2) is more memory-efficient
+    // than preAlloc(capacity + 1)
   }
   data[size] = value;
   ++size;
