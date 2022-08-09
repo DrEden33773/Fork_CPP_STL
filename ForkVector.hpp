@@ -11,8 +11,8 @@ public:
 
 private:
   T *data      = nullptr;            // pointer to the data
-  int size     = 0;                  // num of effective elements
-  int capacity = init_capacity_num;  // num of allocated elements
+  int size     = 0;                  // num of effective elements => effective
+  int capacity = init_capacity_num;  // num of allocated elements => allocated
   int current  = 0;                  // current position
 
 public:
@@ -104,8 +104,16 @@ template <typename T>
 void ForkVector<T>::push_back(const T &value) {
   if (size == capacity) {
     preAlloc(capacity * 2);
-    // preAlloc(capacity * 2) is more memory-efficient
+    // preAlloc(capacity * 2) is more likely to be efficient
     // than preAlloc(capacity + 1)
+    //
+    // if you preAlloc(capacity + 1), then you have to preAlloc that again
+    // each time you push_back
+    //
+    // but things will be aparently different if you preAlloc(const * capacity)
+    //
+    // if the const = 2, then it means you only need to preAlloc that
+    // after push_back n times
   }
   data[size] = value;
   ++size;

@@ -19,7 +19,7 @@ private:
     T data;
     Node *upper = nullptr;
     Node *lower = nullptr;
-    explicit Node(const int &data) { this->data = data; }
+    explicit Node(const T &data) { this->data = data; }
   };
   Node *bottom  = nullptr;
   Node *surface = nullptr;
@@ -77,7 +77,7 @@ public:
   bool operator!=(const ForkStack &other) const;
   T &operator[](const int &index);
   const T &operator[](const int &index) const;
-  iterator &operator      =(const iterator &other);
+  iterator &operator=(const iterator &other);
   const iterator &operator=(const iterator &other) const;
   bool operator==(const iterator &other) const;
   bool operator!=(const iterator &other) const;
