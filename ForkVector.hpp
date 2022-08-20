@@ -89,8 +89,15 @@ ForkVector<T>::ForkVector(const ForkVector &other) {
 // pre_allocate_capacity
 template <typename T>
 void ForkVector<T>::preAlloc(const int &n) {
-  if (n > capacity) {
-    capacity = n;
+  int input = n;
+  if (input < size) {
+    std::cout << "Input Capacity {" << n << "} is smaller than original size {"
+              << size << "}, but has been automatically reset to that "
+              << "in order to avoid discarding data." << std::endl;
+    input = size;
+  }
+  if (input > capacity) {
+    capacity = input;
     T *temp  = new T[capacity];
     for (int i = 0; i < size; i++) {
       temp[i] = data[i];
